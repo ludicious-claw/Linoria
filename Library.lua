@@ -7,18 +7,7 @@ local RunService = game:GetService('RunService')
 local TweenService = game:GetService('TweenService');
 local RenderStepped = RunService.RenderStepped;
 local LocalPlayer = Players.LocalPlayer;
-local Mouse = setmetatable({}, {
-    __index = function(_, k)
-        if k == "X" then 
-            return math.round(UserInputService:GetMouseLocation().X)
-        elseif k == "Y" then 
-            return math.round(UserInputService:GetMouseLocation().Y)
-        elseif k == "Icon" then
-            return "" -- just in case
-        end
-        return nil
-    end
-});
+local Mouse = cloneref(LocalPlayer:GetMouse());
 
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 
