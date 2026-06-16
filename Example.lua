@@ -1,6 +1,6 @@
 local repo = 'https://raw.githubusercontent.com/ludicious-claw/Linoria/main/'
 
-local Library = loadstring(game:HttpGet(repo .. 'Library'))() --DONT ADD .lua
+local Library = loadstring(game:HttpGet(repo .. 'Library.lua'))()
 local ThemeManager = loadstring(game:HttpGet(repo .. 'addons/ThemeManager.lua'))()
 local SaveManager = loadstring(game:HttpGet(repo .. 'addons/SaveManager.lua'))()
 
