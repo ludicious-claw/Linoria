@@ -13,7 +13,11 @@ local Mouse = cloneref(InputService:GetMouseLocation());
 local ScreenGui = Instance.new('ScreenGui');
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
-ScreenGui.Parent = CoreGui;
+if gethui then 
+    ScreenGui.Parent = gethui()
+else
+    ScreenGui.Parent = CoreGui;
+end
 
 local Toggles = {};
 local Options = {};
